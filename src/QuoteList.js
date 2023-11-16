@@ -14,21 +14,27 @@ function QuoteList(props) {
     }
     getData();
   }, []);
-  const quotes = quote.map((quote, index) => {
+  const quotes = quote.map((quoteData, index) => {
     return (
       <>
-        {loading == true ? (
-          <p>loading...</p>
-        ) : (
-          <Quote key={index} quote={quote.quote} author={quote.author} />
-        )}
+        <Quote
+          key={quoteData.id}
+          quote={quoteData.quote}
+          author={quoteData.author}
+        />
       </>
     );
   });
   return (
     <>
-      <h1>Quotes</h1>
-      {quotes}
+      {loading == true ? (
+        <p>loading...</p>
+      ) : (
+        <>
+          <h1>Quotes</h1>
+          {quotes}
+        </>
+      )}
     </>
   );
 }
