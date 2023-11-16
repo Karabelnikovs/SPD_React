@@ -18,7 +18,7 @@ function QuoteList(props) {
     return (
       <>
         <Quote
-          key={quoteData.id}
+          key={index}
           quote={quoteData.quote}
           author={quoteData.author}
         />
