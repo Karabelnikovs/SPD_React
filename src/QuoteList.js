@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Quote from "./Quote";
-function QuoteList(props) {
+function QuoteList() {
   const [quote, setQuote] = useState([]);
   const [loading, setLoading] = useState(true);
 
